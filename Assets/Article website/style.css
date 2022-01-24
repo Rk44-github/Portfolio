@@ -1,0 +1,509 @@
+/* =============== All the imports============== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+
+/* ------------- Variables -------------- */
+:root{
+
+    /*  text colors */
+    --text-grey:#808291;
+    --text-white:#f8f9fa;
+    --text-light:#f6f6f6;
+    --text-dark:#1A3260;
+    --text-dark2:#1A3760D4;
+    --text-red:#ff4d6d;
+    --box-shadow:0px 0px 50px 0px rgba(0 0 0/10%);
+    --bg-blue:rgb(225, 200, 250) ;
+    --bg-red:rgb(255, 196, 238);
+    --bg-yellow:rgb(255, 255, 208);
+    --bg-purple:rgb(199, 255, 255) ;
+
+    /* ======== Font family ======= */
+    --font-poppins: "Poppins", sans-serif;
+
+    /* ================= Gradient colors================== */
+    --bg-gradient: linear-gradient(to right, #ff512f, #dd2476);
+    --bg-gradient-indigo: linear-gradient(to right, #8e2de2, #4a00e0);
+    --bg-gradient-peach: linear-gradient(to right, #fff7f3, #fff7f3 );
+    --bg-gradient-yellow: linear-gradient(to right, #fdf7bc, #f7f59a );
+    --bg-gradient-red: linear-gradient(to right, #ffc4a2, #fa9088 );
+    --bg-gradient-blue: linear-gradient(to right, #a7e2fa, #acb8ff );
+    --bg-gradient-purple: linear-gradient(to right, #e3b8ff, #ffcaff );
+
+    /* ========================Images Variables ====================== */
+    --bg-cover: url(./Assets/airplane-transparent.png);
+    --bg-img1: url(./Assets/image1.jpg);
+    --bg-img2: url(./Assets/image2.jpg);
+    --bg-img3: url(./Assets/image3.png);
+
+
+}
+
+*>*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+/* -------------End of Variables -------------- */
+
+/* -------------Global Classe/Variables -------------- */
+.text-dark{
+    color: var(--text-dark);
+}
+
+.text-white{
+    color: var(--text-white);
+}
+.text-light{
+    color: var(--text-light);
+}
+.text-grey{
+    color: var(--text-grey);
+}
+.text-red{
+    color: var(--text-red);
+}
+.bg-gradient{
+    background: var(--bg-gradient);
+}
+.bg-gradient-indigo{
+    background: var(--bg-gradient-indigo);
+}
+.bg-gradient-peach{
+    background: var(--bg-gradient-peach);
+}
+.bg-gradient-red{
+    background: var(--bg-gradient-red);
+}
+.bg-gradient-blue{
+    background: var(--bg-gradient-blue);
+}
+.bg-gradient-yellow{
+    background: var(--bg-gradient-yellow);
+}
+.bg-gradient-purple{
+    background: var(--bg-gradient-purple);
+}
+.font-poppins{
+    font-family: "Poppins", sans-serif;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-sm{
+font-size: 1em;
+line-height: 1.5em;
+}
+.text-md{
+    font-size: 1.5em;
+}
+.text-lg{
+    font-size: 2em;
+    line-height: 3rem;
+}
+.text-xl{
+    font-size: 3em;
+}
+.text-xxl{
+    font-size: 5em;
+}
+.font-bold{
+    font-weight: bold;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-initials{
+    flex: 01 auto;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+.justify-center{
+    justify-content: center;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.container{
+    width: 100%;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+.py-2{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.py-5{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.py-10{
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+.px-5{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+}
+.px-10{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+.link{
+    color: var(--text-dark);
+    font-weight: bold;
+}
+.link:hover{
+    color:var(--text-red) ;
+}
+.btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn-primary{
+    padding: .8em .5em;
+    border-radius: 50px;
+    font-family: var(--font-poppins);
+    font-weight: bold;
+}
+.btn-shadow{
+    box-shadow: var(--box-shadow);
+}
+.btn-primary:hover{
+    background: var(--bg-gradient-indigo);
+}
+.bg-cover{
+    background: var(--background-cover);
+    object-fit: fill;
+}
+.d-inline{
+    display: inline-block;
+}
+.d-block{
+    display: block;
+}
+.grid{
+    display: grid;
+}
+.cols-1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+/* -------------End of Global Classe/Variables -------------- */
+/* #################### Media Query #################### */
+/* for Small screen sm(640px) */
+@media(min-width:640px){
+    .container{
+        max-width: 640px;
+    }
+    .sm-text-xl{
+        font-size: 3em;
+    }
+    .sm-px-10{
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+}
+/* for Medium screen md(768px) */
+@media(min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+    .md-text-left{
+        text-align: left;
+    }
+    .md-mx-initial{
+        margin: initial;
+    }
+    .md-cols-2{
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+    }
+}
+/* for large screen lg(1024px) */
+@media(min-width:1024px){
+    .container{
+        max-width: 1024px;
+    }
+    #nav .toggle-btn>button{
+        display: none;
+    }
+    #nav{
+        flex-direction: row !important;
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+    .collapse{
+        max-height: initial !important;
+    }
+    .collapse ul{
+        flex-direction: row !important;
+    }
+    .active{
+        max-height: 100% !important;
+    }
+    .lg-cols-3{
+        grid-template-columns: repeat(3,minmax(0, 1fr) );
+    }
+    .lg-cols-2{
+        grid-template-columns: repeat(2,minmax(0, 1fr) );
+    }
+    .lg-cols-4{
+        grid-template-columns: repeat(4,minmax(0, 1fr));
+    }
+}
+/* for Extra-large screen xl(1280px) */
+@media(min-width:1280px)
+{
+    .container{
+        max-width: 1280px;
+    }
+    #nav{
+    background: transparent !important;
+
+     }
+    #nav .flex-initials ul button{
+    display: inline-block !important;
+    }
+
+}
+
+/* #################### /Media Query #################### */
+/* ##################### Navigation Menu ##################### */
+#nav{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--text-light);
+    flex-direction: column;
+}
+
+#nav .collapse{
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: all 0.9s ease;
+}
+#nav .collapse ul{
+    flex-direction: column;
+    text-align: center;
+    padding:0 3rem;
+
+}
+#nav .collapse ul>li{
+padding: 0 1.5rem;
+line-height: 3rem;
+font-size: 1.1em;
+
+
+}
+#nav .toggle-btn>button{
+    font-size: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.5rem;
+    color: var(--text-dark2);
+
+
+}
+#nav .flex-initials ul button{
+    display: none;
+
+}
+.active{
+    max-height: 50vh !important;
+}
+
+/* ##################### /Navigation Menu ##################### */
+
+/* ##################### Banner Area ##################### */
+#site-main .banner-area{
+    width: 100%;
+    position: relative;
+    background: var(--bg-cover) no-repeat;
+    background-position-x: right;
+    z-index: -99;
+}
+#site-main .banner-area .banner-title{
+    height: 95vh;
+    padding-top: 16rem ;
+}
+/* ##################### /Banner Area ##################### */
+
+/* ##################### Agency Area ##################### */
+#site-main .agency-area{
+padding: 5em 0;
+}
+
+/* ##################### /Agency Area ##################### */
+
+/* ##################### Life Area ##################### */
+#site-main .life-area>.grid{
+    column-gap: 10em;
+
+}
+#site-main .life-area .grid-images{
+    display: grid;
+    grid-template-columns: repeat(16, (10px, 1fr));
+    grid-template-rows: repeat(8, (100px, 1fr));
+}
+#site-main .life-area .grid-images .item-one{
+    background-color: var(--text-grey);
+    grid-column-start:1 ;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background: var(--bg-img1) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+#site-main .life-area .grid-images .item-two{
+    background-color: var(--text-grey);
+    grid-column-start:9 ;
+    grid-column-end: 16;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: var(--bg-img2) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+#site-main .life-area .grid-images .item-three{
+grid-area: 3/4/8/14;   /* row-start/row-end/col-start/col-end  */
+background: var(--bg-img3) no-repeat;
+background-size: cover;
+border-radius: 8px;
+z-index: 99;
+}
+
+/* ##################### /Life Area ##################### */
+
+/* ##################### Counting Area ##################### */
+#site-main .counting-area{
+    padding: 7em 0;
+}
+#site-main .counting-area .grid-one p{
+    width: 80%;
+
+}
+#site-main .counting-area .count-box{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+#site-main .counting-area .count-box .grid{
+display: inline-grid;
+grid-gap: 2px;
+border-radius: 20px;
+background-color: var(--text-light);
+}
+#site-main .counting-area .count-box .grid>div{
+    background-color: white;
+    padding: 2em 2.5em;
+    text-align: center;
+}
+
+
+/* ##################### /Counting Area ##################### */
+
+/* ##################### Card Area ##################### */
+#site-main .card-area .grid{
+    column-gap: 4em;
+    row-gap: 1em;
+}
+
+/* ##################### /Card Area ##################### */
+
+/* ##################### Recent-Work Area ##################### */
+#site-main .recent-work-area .flex-items{
+    width: 300px;
+    margin-bottom: 10px;
+}
+#site-main .recent-work-area .flex-items img{
+    border-radius: 10px;
+}
+
+
+/* ##################### /Recent-Work Area ###################*/
+
+/* ##################### Article Area ###################*/
+#site-main .article-area .grid{
+    column-gap: 5em;
+}
+#site-main .article-are .card .article{
+    border-radius: 10px;
+}
+
+/* ##################### /Article Area ###################*/
+
+/* ##################### Readay Area ###################*/
+#site-main .ready-area .flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* ##################### /Readay Area ###################*/
+
+/* ##################### footer Area ###################*/
+#footer{
+    border: 2px solid var(--text-light);
+    margin-top: 8em;
+
+}
+#footer .grid{
+    column-gap: 3em;
+    padding: 6em 0;
+    border-bottom: 2px solid var(--text-light);
+}
+#footer .grid input.subscribe-text{
+    border: none;
+    background-color: var(--text-light);
+    padding: 1em;
+    font-size: 1em;
+    font-family: var(--font-poppins);
+}
+#footer .grid input.subscribe-text:focus{
+    border: none;
+    outline: none;
+}
+#footer .grid button.btn-go{
+    background-color: var(--text-light);
+    padding: 0 2em;
+    font-family: var(--font-poppins);
+}
+
+#footer .grid button.btn-go:hover{
+    background-color: var(--text-dark);
+    color: white;
+}
+
+/* ##################### /footer Area ###################*/

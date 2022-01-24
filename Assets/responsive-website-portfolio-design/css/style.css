@@ -1,0 +1,307 @@
+*,html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-poppins);
+    overflow-x: hidden;
+    
+}
+
+
+:root{
+    --font-l: 5em;
+    --font-m:2.5em;
+    --font-s: 1.2em;
+    --font-vs: .8em;
+    --font-poppins: "Poppins", sans-serif;
+
+
+    --clr-accent: red;
+    --clr-light: white;
+    --clr-dark: black;
+
+    
+
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+.nav-open .nav ul{
+    transform: translateX(0%);
+}
+.nav-open .burger-menu{
+    position: fixed;
+}
+
+/* *********************** Header Section  ************************* */
+.header{
+    padding: 1em 1em;
+}
+
+.header .header-img{
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+   
+}
+
+.header .logo{
+font-size: var(--font-vs);
+font-family: var(--font-poppins);
+
+}
+.header .logo h1{
+    padding: 2em 10em;
+    font-weight: 600;
+}
+.logo-color{
+    padding-left: 2em;
+}
+.logo-red{
+    color: var(--clr-accent);
+}
+/*-----------------------Burger-Menu-----------------------*/
+.burger-menu{
+    display: none;
+    position: absolute;
+    top: 3em;
+    right: 3em;
+}
+.burger-menu img{
+  background-color: red;
+  height: 50px;
+    width: 50px;
+}
+
+/*-----------------------Burger-Menu-----------------------*/
+
+
+
+/*-----------------------Navbar-----------------------*/
+.nav ul{
+    display: flex; 
+    gap: 4em;
+    list-style: none;
+    position: absolute;
+    top:3.4em;
+    right: 5em;
+    font-family: var(--font-poppins);
+    font-size: var(--font-s);
+    font-weight: 500;
+
+}
+
+.nav ul a{
+    text-decoration: none;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+}
+/*-----------------------Navbar-----------------------*/
+.main{
+    width: 600px;
+    margin: 5em 4em;
+    padding-left: 10em;
+    
+    
+}
+.main-title{
+    font-size: 3em;
+    font-weight: 600;
+    text-shadow: 1px 2px 1px rgb(114, 110, 110);
+  
+}
+.main-para{
+    padding: 1em 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    
+}
+.down-arrow img{
+  height: 800px;
+  margin-left: 13em;
+}
+/* *********************** Header Section  ************************* */
+
+/* *********************** Shoe Section  ************************* */
+
+.shoe-section{
+    padding: 0 14em;
+}
+.shoe-section .shoe-title{
+    display: flex;
+    gap: 10em;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 0;
+
+}
+
+.shoe-heading{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.shoe-para{
+    width: 400px;
+    align-content: center;
+}
+.shoe-heading h3{
+    font-size: var(--font-m);
+    float: right;
+
+}
+.shoe-heading-1 h3{
+    font-size: var(--font-m);
+}
+.shoe-title-1{
+   display: flex;
+   gap: 10em;
+   align-items:center;
+   justify-content: center;
+    
+}
+.shoe-title-1 .shoe-para-1{
+    width: 400px;
+    align-content: center;
+}
+
+.shoe-section img{
+    width: 25vw;
+    height: auto;
+}
+
+
+
+/* *********************** Shoe Section  ************************* */
+
+/* *********************** Media Queries  ************************* */
+@media (max-width: 768px){
+    .header{
+        background-image: url(../images/nike-shoe-black.jpg);
+        background-repeat: no-repeat;
+        }
+
+     
+        
+    .header .logo-color{
+        color: white;
+    }
+    .header .logo h1{
+        padding-left: 0;
+    }
+    .header .main {
+        
+        color: rgb(255, 255, 255);
+        opacity: .9;
+    }
+    .header .down-arrow img{
+        
+        height: 500px;
+    
+    }
+    .main{
+        padding: 0;
+    }
+
+   .shoe-section{
+       padding: 0 2em;
+   }
+   .shoe-section img{
+       width: 40vw;
+       height: auto;
+   }
+   .shoe-section .shoe-title{
+       gap: 1em;
+        }
+    .shoe-section .shoe-title-1{
+        gap: 1em;
+    }    
+    .shoe-section .shoe-title .shoe-heading h3{
+        font-size: 2rem;
+    }
+    .shoe-section .shoe-title .shoe-heading .para{
+      font-size: .2rem;
+    }
+    .shoe-section .shoe-title-1 h3{
+        font-size:2rem ;
+    }
+
+
+}
+
+@media(max-width:976px){
+    
+    .nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: var(--clr-dark);
+        color: var(--clr-light);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    
+        transform: translateX(100%);
+        transition: transform 250ms cubic-bezier(.6, 0, .6, 1);
+    }
+    
+    .header .burger-menu{
+        display: block !important;
+       
+        z-index: 1000;
+    }
+
+    .header .main{
+        width: 30vw;
+    }
+    .shoe-section{
+        padding: 0 .5em;
+    }
+    .shoe-section .shoe-para{
+        width: 40vw;
+    }
+    .shoe-section .shoe-para-1{
+        width: 40vw;
+    }
+}
+
+@media(max-width:565px) {
+    .shoe-section h3{
+        font-size: .5rem;
+    }
+    .shoe-section .shoe-para{
+        font-size: .8rem;
+    }
+    .shoe-section .shoe-para-1{
+        font-size: .8rem;
+    }
+}
+
+@media(max-width:1390px){
+    
+    .header .burger-menu{
+        display: none;
+    }
+    .header .logo h1{
+        padding: 2rem 0;
+    }
+    .header .main .main-title{
+        font-size: 2em;
+
+    }
+    .header .main {
+        width: 60vw;
+        color: #ff5c5c;
+    }
+    .shoe-section{
+        padding: 0 1em;
+    }
+
+}

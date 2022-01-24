@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+<!-- Custom style-sheet -->
+
+<link rel="stylesheet" href="./css/variables.css">
+<link rel="stylesheet" href="./css/style.css">
+
+<!-- End of the custom style sheets -->
+  </head>
+  
+  <body>
+    
+  <div id="clock-main">
+      <h1 class="clock">Time</h1>
+    <div class="Set-Alarm">
+      <label for="Alarm" class="set">Set Alarm : </label>
+      <input type="time" id="Alarm-time" value="" row="100">
+    </div>
+    
+  </div>
+    
+     <button class="myBtn" onclick="handleClick()">Set Alarm</button>
+     <button id="cancel" onclick="CancelAlarm()">Cancel</button>
+    
+
+
+<!-- custom javascript -->
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import url(./fonts.css);
+
+
+
+
+*,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+body{
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  
+}
+.clock{
+  color: rgba(255, 0, 0, 0.87);
+  font: normal 500 150px/23px var(--primary-font);
+  position: absolute;
+  top: 300px;
+  left: 700px;
+  bottom: 100px;
+}
+
+#clock-main{
+  padding: 20px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  position: absolute;
+  top: 450px;
+  left: 650px;
+}
+
+.set{
+  color: white;
+  font-size: 50px;
+}
+
+.Set-Alarm{
+align-items: center;
+justify-content: center;
+position: absolute;
+top: 450px;
+left: 770px;
+}
+
+#Alarm-time{
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  border-radius: 10px;
+}
+/*  BTN */
+
+
+.myBtn{
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  color:white;
+  background-color: grey;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 600px;
+  left: 800px;
+}
+
+#cancel{
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  color:white;
+  background-color: rgb(218, 20, 20);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 600px;
+  left: 1010px;
+}
+
+.Alarm-set{
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  color:white;
+  background-color: rgb(39, 223, 23);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 600px;
+  left: 800px;
+}

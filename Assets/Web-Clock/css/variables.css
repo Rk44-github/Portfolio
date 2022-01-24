@@ -1,0 +1,11 @@
+
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --primary-font : "digital-7", sans-serif;
+}
