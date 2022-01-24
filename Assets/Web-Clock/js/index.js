@@ -39,6 +39,7 @@ function addZero(time) {
 function timeLoop ()
 {
     var hours = Math.abs((12 - (new Date().getHours()) ));
+    console.log(hours);
     
     var min = new Date().getMinutes();
    let currentTime = ( addZero(hours) + ":" + addZero(min));
@@ -90,6 +91,7 @@ function ringAlarm()
 {
    let x = getValue();
       var time = timeLoop();
+      console.log(time);
 
      if (x == time) 
      {
