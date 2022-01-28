@@ -37,11 +37,16 @@ function addZero(time) {
 
 // ********************** TimeLoop  ***************************//
 function timeLoop ()
-{
-    var hours = Math.abs((12 - (new Date().getHours()) ));
-    console.log(hours);
+{   var time = new Date();
+   var hours = time.getHours();
+   var min = time.getMinutes();
+  
+           if (hours > 12) {
+               hours -= 12;
+           } else if (hours === 0) {
+              hours = 12;
+           }
     
-    var min = new Date().getMinutes();
    let currentTime = ( addZero(hours) + ":" + addZero(min));
    
    return currentTime; 
@@ -71,14 +76,16 @@ function checkList(){
    var list = Setbutton.classList;
    const x = getValue();
     
-     if(list.contains("Alarm-set"))
-            { alert("Alarm is already set! Cancel the current Alarm to set a new one."); }
-      else
-      {
-         Setbutton.innerText = "Alarm set for " + x ;
-         Setbutton.classList.add("Alarm-set");
-        setInterval( ()=> ringAlarm(), 1000);    
-      };
+     
+   if(x === ""){alert("Enter the Alarm time!");}
+   else if(list.contains("Alarm-set"))
+   { alert("Alarm is already set! Cancel the current Alarm to set a new one."); }
+    else
+    {
+       Setbutton.innerText = "Alarm set for " + x ;
+       Setbutton.classList.add("Alarm-set");
+      setInterval( ()=> ringAlarm(), 1000);    
+    };
 
 }
 
@@ -90,15 +97,15 @@ function checkList(){
 function ringAlarm()
 {
    let x = getValue();
-      var time = timeLoop();
-      console.log(time);
+   let time = timeLoop();
+   
 
      if (x == time) 
      {
             bikeHorn.play();
-            console.log("Ringing Now!");
+           
          
-      };
+      }
 }
 
 // ********************* End Of the Alarm function ****************//
